@@ -1,0 +1,26 @@
+[
+    {
+        "model": "movies",
+        "data": {
+            "movieName": "Forrest Gump",
+            "actors": [1,2],
+            "productionId": 1
+        }
+    },
+    {
+        "model": "movies",
+        "data": {
+            "movieName": "Apollo 13",
+            "actors": [1,2,3],
+            "productionId": 2
+        }
+    },
+    {
+        "model": "movies",
+        "data": {
+            "movieName": "Tombstone",
+            "actors": [3],
+            "productionId": 3
+        }
+    }
+]

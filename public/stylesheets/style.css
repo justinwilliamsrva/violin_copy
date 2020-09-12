@@ -1,0 +1,55 @@
+form.signup,
+form.login {
+    margin-top: 50px;
+}
+
+#nav-link {
+    color: black;
+    text-decoration: none;
+}
+
+.bn {
+    width: 30%;
+    /* height: 90%; */
+}
+
+.rowbn {
+    padding-top: 30px;
+    /* height: 30vh; */
+}
+
+h1,
+h3 {
+    text-align: center;
+}
+
+.membera {
+    color: white;
+    font-size: 25px;
+}
+.membera:hover {
+    color: black;
+}
+
+.col-md-6 {
+    background-image: linear-gradient(to right, brown, yellow);
+}
+@media only screen and (max-width: 768px) {
+    .bn {
+        width: 50%;
+    }
+
+    .bn-sm {
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .bn {
+        width: 75%;
+    }
+
+    .bn-sm {
+        margin-bottom: 30px;
+    }
+}

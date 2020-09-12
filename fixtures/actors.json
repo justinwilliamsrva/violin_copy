@@ -1,0 +1,20 @@
+[
+    {
+        "model": "actors",
+        "data": {
+            "actorName": "Tom Hanks"
+        }
+    },
+    {
+        "model": "actors",
+        "data": {
+            "actorName": "Gary Siense"
+        }
+    },
+    {
+        "model": "actors",
+        "data": {
+            "actorName": "Bill Paxton"
+        }
+    }
+]

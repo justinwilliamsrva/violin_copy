@@ -139,19 +139,26 @@ module.exports = function(app) {
 
 
     app.get("/lessons/search", (req, res) => {
-        let { term } = req.query;
+        const { term } = req.query;
 
         db.Objectives.findAll({
-            where: {
-                [Op.or]: [
-                    { objective: { [Op.like]: "%" + term + "%" } },
-                    { lesson_plan: { [Op.like]: "%" + term + "%" } },
-                ],
-            },
+          where: {
+            [Op.or]: [
+              { objective: { [Op.like]: "%" + term + "%" } },
+              { lesson_plan: { [Op.like]: "%" + term + "%" } }
+            ]
+          },
+          include: [
+            {
+              model: db.Exercises
+            }
+          ]
         }).then(function(objectives) {
-            res.render("search_lessons", { objectives });
+        //   console.log("first objective", objectives[0].dataValues.Exercises[0].dataValues.book_title);
+          res.render("search_lessons", { objectives });
         });
-    });
+      });
+
 
     app.get("/lessons/add", (req, res) => {
         db.Exercises.findAll({}).then(function(exercises) {
@@ -162,7 +169,7 @@ module.exports = function(app) {
 
     app.post("/lessons/add", (req, res) => {
         let { objective, lesson_plan } = req.body;
-        s;
+
 
         res.render("add_lessons", {
             objective,
